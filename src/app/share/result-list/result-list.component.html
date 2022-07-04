@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>SL</th>
+    <th>Exam</th>
+    <th>Passing Year</th>
+    <th>Result</th>
+  </tr>
+  <tr *ngFor="let item of resultList; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{item.exam}}</td>
+    <td>{{item.passYear}}</td>
+    <td>{{item.result}}</td>
+  </tr>
+</table>

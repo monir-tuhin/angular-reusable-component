@@ -1,0 +1,13 @@
+<!-- <select>
+    <option selected>&#45;&#45;select&#45;&#45;</option>
+    <option *ngFor="let item of districtList"
+            (change)="changeSupplier($event)">{{item.name}}</option>
+ </select>-->
+
+ <div>
+   <label for="district">District</label>
+   <select [formControl]="districtName" id="district">
+     <option selected>--select--</option>
+     <option *ngFor="let item of districtList" [ngValue]="item.name">{{item.name}}</option>
+   </select>
+ </div>

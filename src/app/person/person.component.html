@@ -1,0 +1,20 @@
+<!--
+<district-select (districtSelectEvent)="getSelectedDistrict($event)"></district-select>
+
+<name-input (></name-input>
+-->
+
+<form [formGroup]="personForm" (ngSubmit)="submit()" style="padding-top: 25px">
+  <div align="center">
+    <district-select formControlName="district"></district-select>
+    <name-input formControlName="personName"></name-input>
+<!--    <result-list [resultListInput]="resultList"></result-list>-->
+    <result-list (resultListOutput)="resultListEvent($event)"></result-list>
+
+    <button [disabled]="personForm.invalid">Sign Up</button>
+    <!--  <button type="button" (click)="resetForm()">Reset</button>-->
+
+    <button (click)="updatePerson(personForm.value)">Update</button>
+    <button (click)="updatePerson2(personForm.value)">Update 2</button>
+  </div>
+</form>

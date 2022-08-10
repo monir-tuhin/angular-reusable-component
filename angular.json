@@ -121,5 +121,8 @@
         }
       }
     }},
-  "defaultProject": "reusable-components-rnd"
+  "defaultProject": "reusable-components-rnd",
+  "cli": {
+    "analytics": "7e40f5f9-1d04-46f6-9476-f329f1206dd9"
+  }
 }

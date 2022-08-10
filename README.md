@@ -37,6 +37,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   one version to another version. If you have current version is 9 then
   you can not update to 12 or 13 or 14 version at a time. Then you have
   to update your next version first of your current version. Then after
-  updation the you can update next version from your updated current
+  updation you can update next version from your updated current
   version. )
 

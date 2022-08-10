@@ -7,7 +7,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import {FormBuilder, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {UntypedFormBuilder, NG_VALUE_ACCESSOR} from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -33,7 +33,7 @@ export class ResultListComponent implements OnInit, OnDestroy {
 
   constructor(
     private cdr: ChangeDetectorRef,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {
 
   }

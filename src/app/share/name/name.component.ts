@@ -11,7 +11,7 @@ import {
   ViewChild
 } from '@angular/core';
 import {Subscription} from 'rxjs';
-import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor, UntypedFormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
 	selector: 'name-input',
@@ -28,7 +28,7 @@ import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/for
 })
 export class NameComponent implements OnInit, ControlValueAccessor, OnDestroy {
   subscriptions: Subscription[] = [];
-  name = new FormControl('');
+  name = new UntypedFormControl('');
 
   get value() {
     return this.name.value;

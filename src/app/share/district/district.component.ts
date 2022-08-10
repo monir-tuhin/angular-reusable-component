@@ -9,7 +9,7 @@ import {
   TemplateRef,
   ViewChild
 } from '@angular/core';
-import {ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor, UntypedFormBuilder, UntypedFormControl, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -29,7 +29,7 @@ export class DistrictComponent implements OnInit, ControlValueAccessor, OnDestro
   districtList: any[] = [];
   // districtForm: FormGroup;
   subscriptions: Subscription[] = [];
-  districtName = new FormControl('');
+  districtName = new UntypedFormControl('');
 
   // @Output() districtSelectEvent = new EventEmitter<any>();
 
@@ -48,7 +48,7 @@ export class DistrictComponent implements OnInit, ControlValueAccessor, OnDestro
 
   constructor(
     private cdr: ChangeDetectorRef,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) {
     /*this.districtForm = this.formBuilder.group({
       districtName: [],

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {PersonService} from '../partials/services/person.service';
 import {Router} from '@angular/router';
 import {of} from 'rxjs';
@@ -12,7 +12,7 @@ import {of} from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PersonComponent implements OnInit {
-  personForm: FormGroup;
+  personForm: UntypedFormGroup;
   // resultList = new EventEmitter<any>();
   resultList: any[] = [];
   // @ViewChild(ResultListComponent, { static: false }) child: ResultListComponent; // it also get component's property
@@ -20,7 +20,7 @@ export class PersonComponent implements OnInit {
   // districtName: string;
   // personName: string;
 
-  constructor( private formBuilder: FormBuilder,
+  constructor( private formBuilder: UntypedFormBuilder,
                private personService: PersonService,
                private router: Router) {
     this.personForm = this.formBuilder.group({

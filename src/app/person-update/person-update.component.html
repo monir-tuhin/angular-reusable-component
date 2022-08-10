@@ -1,4 +1,7 @@
 <h2 align="center">Person Update</h2>
 
 <h4>Name Of EventEmitter : {{selectedPersonObjForEventEmitter?.personName}}</h4>
+<input type="text" name="personName" [(ngModel)]="personName" />
 <h4>Name Of RxJS : {{selectedPersonObjForRxJs?.personName}}</h4>
+
+<button (click)="getData()">Event Emitter</button>

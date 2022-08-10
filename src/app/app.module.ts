@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PersonComponent } from './person/person.component';
 import {RouterModule} from '@angular/router';
 import {ShareModule} from './share/share.module';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PersonUpdateComponent } from './person-update/person-update.component';
 import {PersonService} from './partials/services/person.service';
 
@@ -21,7 +21,8 @@ import {PersonService} from './partials/services/person.service';
     AppRoutingModule,
     RouterModule,
     ShareModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [PersonService],
   bootstrap: [AppComponent]

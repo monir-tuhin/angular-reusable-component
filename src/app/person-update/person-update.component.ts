@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import {PersonService} from '../partials/services/person.service';
 import {Observable, of} from 'rxjs';
+import {DataService} from '../partials/services/data.service';
 
 @Component({
   selector: 'app-person-update',
@@ -23,9 +24,15 @@ export class PersonUpdateComponent implements OnInit {
   personName: string;
   // @ViewChild('nameEventEmitter', {static: true}) personName: ElementRef;
 
-  constructor(private personService: PersonService, private cdr: ChangeDetectorRef, private zone: NgZone) { }
+  constructor(private personService: PersonService,
+              private cdr: ChangeDetectorRef,
+              private data: DataService,
+              private zone: NgZone) { }
 
   ngOnInit() {
+
+    this.data.data$.subscribe(value => console.log(value));
+
     this.getData();
     this.getData2();
   }

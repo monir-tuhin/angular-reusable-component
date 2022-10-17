@@ -2,7 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output,
 import {UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
 import {PersonService} from '../partials/services/person.service';
 import {Router} from '@angular/router';
-import {of} from 'rxjs';
+import {DataService} from '../partials/services/data.service';
 
 
 @Component({
@@ -22,6 +22,7 @@ export class PersonComponent implements OnInit {
 
   constructor( private formBuilder: UntypedFormBuilder,
                private personService: PersonService,
+               private dataService: DataService,
                private router: Router) {
     this.personForm = this.formBuilder.group({
       district: ['',  Validators.required],
@@ -74,6 +75,7 @@ export class PersonComponent implements OnInit {
   // send data from one object to another obj by event emitter
   updatePerson(personObj: object) {
     this.personService.sendDataByEvent(personObj);
+    this.sendData('Hello!!!')
     this.router.navigate(['/person-update']);
   }
 
@@ -82,4 +84,9 @@ export class PersonComponent implements OnInit {
     this.personService.sendData(personObj);
     this.router.navigate(['/person-update']);
   }
+
+  sendData(x){
+    this.dataService.emitdata(x);
+  }
+
 }

@@ -4,6 +4,7 @@ import {DistrictComponent} from './district/district.component';
 import {NameComponent} from './name/name.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ResultListComponent} from './result-list/result-list.component';
+import {ExaminationComponent} from './examination/examination.component';
 
 
 
@@ -11,12 +12,14 @@ import {ResultListComponent} from './result-list/result-list.component';
   declarations: [
     DistrictComponent,
     NameComponent,
-    ResultListComponent
+    ResultListComponent,
+    ExaminationComponent
   ],
   exports: [
     DistrictComponent,
     NameComponent,
-    ResultListComponent
+    ResultListComponent,
+    ExaminationComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,18 @@
+.template-list{
+	padding: 4px 10px;
+	border-radius: 4px;
+}
+.mbo-template-dropdown-height {
+	max-height: 350px;
+	overflow: auto;
+}
+ul#dropdown-animated {
+	li {
+		position: relative;
+		button {
+			position: absolute;
+			right: 5px;
+			top: 5px;
+		}
+	}
+}

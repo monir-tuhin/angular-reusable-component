@@ -9,12 +9,14 @@ import {ShareModule} from './share/share.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PersonUpdateComponent } from './person-update/person-update.component';
 import {PersonService} from './partials/services/person.service';
+import {MonitoringComponent} from './monitoring/monitoring.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonComponent,
-    PersonUpdateComponent
+    PersonUpdateComponent,
+    MonitoringComponent,
   ],
   imports: [
     BrowserModule,
